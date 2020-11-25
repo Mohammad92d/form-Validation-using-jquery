@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">  
+
+</head>
+<body>
+  
+    <div > 
+        
+        <form  id="">
+           
+          <label > Email</label>
+          <input type="text" id="email" name="" placeholder="Your email">
+
+          <label for="passsword">password</label>
+          <input type="password" id="psd" name="passs" placeholder="passsword">
+
+          <label for="repasssword">repassword</label>
+          <input type="password" id="rpsd" name="repasss" placeholder="repasssword">
+
+          <label for="mobile">mobile</label>
+          <input type="number" id="mobile" name="mob" placeholder="Your Mobile">
+        
+         <button type="submit" onclick="validotion()">submit</button>
+        </form>
+      </div>
+      
+
+   <script type="text/javascript">
+      
+            
+       function validotion()
+        {  
+            var x = document.getElementById("email").value;
+            let phon =document.getElementById("mobile").value;
+             var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+             var phoneformat = /^\d{10}$/ ;
+             var ps1 = document.getElementById("psd").value;
+             var ps2 = document.getElementById("rpsd").value;
+            if(x.match(mailformat))
+            {
+                alert ("Valid email address!");
+            }
+              else 
+            {       alert(" email address not Valid");  
+            
+        }
+        if(ps1 === ps2){	
+            alert("Password is  Match");
+
+     	}
+        else
+        {
+            alert("Password is Not Match plz try again");
+            
+        }
+        if(phon.match(phoneformat)){
+		alert("valid mobile")
+        }
+        else
+        {
+            alert("Wroung mobile number");	
+            
+        }
+    }
+        </script>
+
+        
+
+
+</body>
+</html>
